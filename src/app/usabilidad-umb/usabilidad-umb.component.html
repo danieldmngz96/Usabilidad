@@ -1,0 +1,44 @@
+<mat-toolbar class="header-toolbar">
+  <mat-toolbar-row  cols="3" style="justify-content: center; padding-top: 42px; margin-top: 15px;">
+    <div class="container-fluid">
+          <a href="">
+             <img src="../../assets/índice.png" alt="" style="height: 120px;
+             position: relative;" width="100%" height="auto"></a>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <div>
+          <p style="color: #ffff;"><i>Estudioso:</i>  &nbsp; Daniel Arturo Dominguez Lopez</p>
+          <br>
+          <b style="color: #ffff;">Ingenieria de Software</b>
+        </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<main>
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <button mat-icon-button disabled></button>
+      {{node.name}}
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+      <button mat-icon-button matTreeNodeToggle
+              [attr.aria-label]="'Toggle ' + node.name">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      {{node.name}}
+    </mat-tree-node>
+  </mat-tree>
+</main>
+
+
