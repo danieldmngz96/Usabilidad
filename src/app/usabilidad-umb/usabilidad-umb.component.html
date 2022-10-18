@@ -1,44 +1,82 @@
 <mat-toolbar class="header-toolbar">
-  <mat-toolbar-row  cols="3" style="justify-content: center; padding-top: 42px; margin-top: 15px;">
+  <mat-toolbar-row cols="3" style="justify-content: center; padding-top: 42px; margin-top: 15px;">
     <div class="container-fluid">
-          <a href="">
-             <img src="../../assets/índice.png" alt="" style="height: 120px;
+      <a href="">
+        <img src="../../assets/índice.png" alt="" style="height: 120px;
              position: relative;" width="100%" height="auto"></a>
-        </div>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
+    </div>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
 
-        <div>
-          <p style="color: #ffff;"><i>Estudioso:</i>  &nbsp; Daniel Arturo Dominguez Lopez</p>
-          <br>
-          <b style="color: #ffff;">Ingenieria de Software</b>
-        </div>
+    <div>
+      <p style="color: #ffff;"><i>Estudioso:</i> &nbsp; Daniel Arturo Dominguez Lopez</p>
+      <br>
+      <b style="color: #ffff;">Ingenieria de Software</b>
+    </div>
 
   </mat-toolbar-row>
 </mat-toolbar>
 
 
-<main>
+<main class="gradiente">
   <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
     <!-- This is the tree node template for leaf nodes -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
       <!-- use a disabled button to provide padding for tree leaf -->
-      <button mat-icon-button disabled></button>
-      {{node.name}}
+      <button mat-icon-button disabled>
+        <mat-icon style="color: #ffff;">book</mat-icon>
+      </button>
+      <div style="width: 30%;"><b>{{contenido}}</b></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="background-color: #ffffff;
+      border-radius: 12px;
+      width: 51%;"> <i>{{node.name}}</i>
+          <h3 style="color: #9f1927;"> <b></b></h3>
+        <p></p>
+      </div>
     </mat-tree-node>
-    <!-- This is the tree node template for expandable nodes -->
-    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-      <button mat-icon-button matTreeNodeToggle
-              [attr.aria-label]="'Toggle ' + node.name">
+
+
+
+
+
+
+    <!-- segundo ingeneria usuabilidad -->
+    <mat-tree-node *matTreeNodeDef="let node ;when: hasChild" matTreeNodePadding>
+      <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
         <mat-icon class="mat-icon-rtl-mirror">
           {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
         </mat-icon>
       </button>
       {{node.name}}
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="background-color: #ffffff;"> <i>{{node.contenido}}</i>
+      </div>
     </mat-tree-node>
   </mat-tree>
 </main>
 
+<footer style="position: relative !important;
+top: 306px !important">
 
+  <mat-toolbar class="header-toolbar" style="margin-bottom: 0px;">
+    <mat-toolbar-row cols="2" style="justify-content: center;">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="../../assets/índice.png" alt="Usabilidad UMB" style="height: 120px;
+               position: relative; border-radius: 50%;
+               " width="100%" height="auto"></a>
+      </div>
+
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>

@@ -2,4 +2,6 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(255,255,240) !important;
+  background: linear-gradient(90deg, rgba(255,255,240,1) 0%, rgba(159,25,39,1) 100%) !important; }
