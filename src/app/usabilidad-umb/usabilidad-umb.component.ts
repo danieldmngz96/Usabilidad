@@ -62,6 +62,30 @@ export class UsabilidadUMBComponent implements OnInit {
       }
     ],
     },
+    {
+      name: 'Métodos de evaluación de usabilidad',
+      children: [{
+        name: 'Usabilidad',
+        children: [{name: 'Una técnica para agregar datos de interacciones entre usuarios finales y productos. Se ha sugerido que el proceso de evaluación involucra varias acciones dependiendo del método de evaluación a realizar. Después de la inspección, que es el método de evaluación más utilizado, los métodos empíricos y de investigación han demostrado que diferentes evaluadores que observan la misma interfaz de usuario obtienen resultados diferentes, incluso cuando utilizan la misma técnica de evaluación. Está claro que las cosas pueden cambiar mucho. la metodología describe el sistema de evaluación de los resultados. Los métodos de evaluación de la usabilidad se pueden categorizar de acuerdo con muchos criterios, y los estudios que se han realizado muestran que aún hoy no existe un acuerdo uniforme sobre la categorización de estos métodos, y varios autores e investigadores definen su propia categorización. La usabilidad se evalúa combinando atributos de diferentes definiciones. Esto significa crear un nuevo método de evaluación basado en la dimensión seleccionada. 1. Prototipo Tienes evaluadores y usuarios a los que se les presenta un prototipo de tu sitio web. Los evaluadores son muy cuidadosos al realizar cambios y mejoras en esta etapa del proyecto, ya que el usuario tiene que interactuar con el prototipo y decir lo que piensa al respecto. experiencia de usuario positiva. 2 cuestionarios Consiste en una serie de preguntas que el evaluador dirige al usuario y que al final de la prueba se le formulan para obtener datos cuantitativos según una puntuación y una escala en función de las respuestas dadas. 3. Experimento: Usar registros para analizar los problemas de los usuarios e identificar los problemas que tienen con el sitio web'}],
+      }
+    ],
+    },
+    {
+      name: 'Diseño web centrado en el usuario',
+      children: [{
+        name: 'Usabilidad',
+        children: [{name: 'Responsable de analizar las interacciones y experiencias de los usuarios con los productos o servicios y desarrollar soluciones para su mejora. Su función es generar experiencias de usuario con un enfoque humano. Hay tres características fundamentales que componen la experiencia del usuario. Una es la usabilidad o la forma en que los usuarios exploran el producto, la segunda es la percepción o la forma en que los usuarios reaccionan a las propiedades visuales del producto, y la tercera es la experiencia o interacción entre los usuarios y el producto, denominada acción. Cuando se habla de usabilidad, es importante considerar si el producto es funcional. Por ejemplo, los usuarios pueden navegar intuitivamente dentro del producto usando elementos disponibles como botones bien definidos. Otro aspecto importante de la usabilidad es la navegación predecible del producto. Un claro ejemplo lo podemos ver en el uso de los menús de navegación. Aquí sabemos que cuando se hace clic en una de las opciones, se mostrará la opción seleccionada resultante.'}],
+      }
+    ],
+    },
+    {
+      name: 'Referencias bibliográficas',
+      children: [{
+        name: 'Webiografia',
+        children: [{name: '• Abran, Khelifi, A., Suryn, W. y Seffah, A. (2003) Integración del modelo de usabilidad ISO. Actas de la 11ª Conferencia Internacional sobre Gestión de la Calidad del Software (págs. 12-14). Alonso-Ríos, V. (2009). Usabilidad: importante análisis y taxonomía. Revista internacional de interacción humano-computadora, 26 (1), 51-55. • Banne, S. (2009). Pruebas de usabilidad de los sistemas de información de salud pública basados en la web. • Pruebas de usabilidad: Una revisión de algunos aspectos metodológicos y técnicos del método. Revista Internacional de Informática Médica, 79(4), e18-e23.'}],
+      }
+    ],
+    },
   ];
   treeControl = new FlatTreeControl<ExampleFlatNode>(
     node => node.level,
